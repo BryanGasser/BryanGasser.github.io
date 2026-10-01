@@ -1,1 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name | Computer Science Student</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f3f6fa;
+    --grid: #d9e2ef;
+    --ink: #1f3a8a;
+    --text: #22252b;
+    --muted: #5b6475;
+    --mark: #ffe45c;
+    --card: #ffffff;
+    --head: 'Bricolage Grotesque', 'Segoe UI', sans-serif;
+    --body: 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12161f; --grid: #1e2533; --ink: #8fb0ff; --text: #e6e9f0;
+      --muted: #9aa3b5; --mark: #5a4d00; --card: #181e2b;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0; color: var(--text); background-color: var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    font: 400 18px/1.6 var(--body);
+  }
+  a { color: var(--ink); }
+  a:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 24px; }
 
+  header { padding: 72px 0 40px; }
+  h1 {
+    font: 800 clamp(2.6rem, 8vw, 4.8rem)/1 var(--head);
+    color: var(--ink); margin: 0 0 16px; letter-spacing: -0.02em;
+  }
+  h1 span { background: linear-gradient(transparent 58%, var(--mark) 58%); }
+  .tagline { font-size: 1.25rem; max-width: 36em; margin: 0 0 24px; }
+  nav { display: flex; flex-wrap: wrap; gap: 8px 20px; font-weight: 600; }
+
+  section { padding: 36px 0; border-top: 2px solid var(--ink); }
+  h2 { font: 700 1.7rem/1.2 var(--head); color: var(--ink); margin: 0 0 20px; }
+  h3 { font: 700 1.15rem/1.3 var(--head); margin: 0; }
+  p { max-width: 62ch; margin: 0 0 14px; }
+  .meta { color: var(--muted); font-size: 0.95rem; margin: 2px 0 8px; }
+
+  .entry {
+    background: var(--card); border: 1.5px solid var(--ink);
+    border-radius: 4px; padding: 18px 20px; margin-bottom: 16px;
+  }
+  .entry p:last-child { margin-bottom: 0; }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; margin: 0; }
+  .skills li {
+    background: var(--card); border: 1.5px solid var(--ink);
+    padding: 4px 14px; border-radius: 999px; font-weight: 600; font-size: 0.95rem;
+  }
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+  .facts div { background: var(--card); border: 1.5px solid var(--ink); padding: 14px 16px; border-radius: 4px; }
+  .facts b { display: block; font: 800 1.9rem/1.1 var(--head); color: var(--ink); }
+
+  footer { padding: 32px 0 64px; color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1><span>Your Name</span></h1>
+    <p class="tagline">[Grade/Year] computer science student at [School Name]. I like building [web apps / games / tools] and figuring out how things work.</p>
+    <nav aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#school">School</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#club">Club</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About me</h2>
+    <p>Hi, I'm [Your Name]. I started coding in [year] when I [how you got started]. Since then I've worked on [a few things you're proud of].</p>
+    <p>Outside of class I enjoy [hobbies, sports, music]. After graduating I want to [college major / career goal].</p>
+  </section>
+
+  <section id="school">
+    <h2>School</h2>
+    <div class="facts" style="margin-bottom:20px">
+      <div><b>[3.9]</b>GPA</div>
+      <div><b>[20XX]</b>Graduation</div>
+      <div><b>[5]</b>CS courses taken</div>
+    </div>
+    <div class="entry">
+      <h3>[School Name]</h3>
+      <p class="meta">[Start year] to [End year] · [City, State]</p>
+      <p>Relevant courses: [AP Computer Science A], [Intro to Programming], [Calculus], [Web Design].</p>
+    </div>
+    <div class="entry">
+      <h3>[Award, honor, or certification]</h3>
+      <p class="meta">[Year]</p>
+      <p>[One sentence on what it was for.]</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="entry">
+      <h3>[Project name]</h3>
+      <p class="meta">[Language / tools] · [Year]</p>
+      <p>[What it does and who it helps. Mention one problem you solved.] <a href="#">View the code</a></p>
+    </div>
+    <div class="entry">
+      <h3>[Project name]</h3>
+      <p class="meta">[Language / tools] · [Year]</p>
+      <p>[What it does and what you learned.] <a href="#">View the code</a></p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>[Python]</li>
+      <li>[Java]</li>
+      <li>[HTML &amp; CSS]</li>
+      <li>[JavaScript]</li>
+      <li>[Git]</li>
+      <li>[Teamwork]</li>
+    </ul>
+  </section>
+
+  <section id="club">
+    <h2>In the computer science club</h2>
+    <div class="entry">
+      <h3>[Your role: member, officer, project lead]</h3>
+      <p class="meta">[Year joined] to present</p>
+      <p>[What you've done for the club: workshops you ran, competitions you joined, people you helped.]</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:you@example.com">you@example.com</a> or find my code on <a href="#">GitHub</a>.</p>
+  </section>
+
+  <footer>&copy; 2026 [Your Name]</footer>
+</div>
+</body>
+</html>
